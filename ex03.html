@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .result{              
+            height:400px;
+            background:rgba(0,0,0,0.2);
+            transition:height 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn01" class="btn">결과상자 감추기(slide up)</button>
+    <button id="btn02" class="btn">결과상자 나타나기(slide down)</button>
+    <button id="btn03" class="btn">결과상자에 글자출력(innerHTML)</button>
+    <button id="btn04" class="btn">결과상자 글 가져오기(innerHTML)</button>
+    <button id="btn05" class="btn">결과상자 감추기(none)</button>
+    <p>위에 버튼을 클릭하세요</p>
+    <div class="result" id="result"></div>
+    <script>
+        let _btn01 = document.querySelector('#btn01');
+        let _btn02 = document.querySelector('#btn02');
+        let _btn03 = document.querySelector('#btn03');
+        let _btn04 = document.querySelector('#btn04');
+        let _btn05 = document.querySelector('#btn05');
+        let _result = document.querySelector('#result');
+        
+        _btn01.onclick=function(){
+           _result.style.height=0;
+        }
+
+        _btn02.onclick=function(){            
+            _result.style.height='400px';
+        }
+
+        _btn03.onclick=function(){            
+           _result.innerHTML='안녕하세요';
+        }
+
+        _btn04.onclick=function(){            
+           console.log(_result.innerHTML);
+        }
+
+        _btn05.onclick=function(){            
+           _result.style.display='none';
+        }
+    </script>
+
+
+    <input type="text" name="num01" id="num01" value="10">
+    <input type="text" name="num02" id="num02">
+    <textarea name="result01" id="result01"></textarea>
+    <span id="btn05">결합</span>
+    <script>
+        let _data01 = document.querySelector('#num01');        
+        let _data02 = document.querySelector('#num02');
+        let _newResult = document.querySelector('#result01');
+        let _btn = document.querySelector('#btn05');
+        
+        _btn.onclick=function(){
+            console.log(1);
+        }
+       
+    </script>
+
+</body>
+</html>
